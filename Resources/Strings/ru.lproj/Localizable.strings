@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  GitHubViewer
+
+  Created by Виталий Зарубин on 05.10.2021.
+  
+*/
+
+"Other.signIn" = "Вход";
+"Other.signUp" = "Регистрация";

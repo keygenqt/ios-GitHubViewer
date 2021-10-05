@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F484DA0270CCD3E002EB917 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F484D9E270CCD3E002EB917 /* Localizable.strings */; };
+		2F484DA3270CCD5D002EB917 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F484DA1270CCD5D002EB917 /* Localizable.strings */; };
+		2F484DAE270CDA93002EB917 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F484DAD270CDA93002EB917 /* Strings.swift */; };
 		2FAA263F270C1D5B00DE66FE /* GitHubViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA263E270C1D5B00DE66FE /* GitHubViewerApp.swift */; };
 		2FAA2641270C1D5B00DE66FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA2640270C1D5B00DE66FE /* ContentView.swift */; };
 		2FAA2643270C1D5C00DE66FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FAA2642270C1D5C00DE66FE /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		0B60559C93BCB8414C2B29BE /* Pods-GitHubViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubViewer.debug.xcconfig"; path = "Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		2F484D9F270CCD3E002EB917 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
+		2F484DA2270CCD5D002EB917 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		2F484DAD270CDA93002EB917 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2FAA263B270C1D5B00DE66FE /* GitHubViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAA263E270C1D5B00DE66FE /* GitHubViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewerApp.swift; sourceTree = "<group>"; };
 		2FAA2640270C1D5B00DE66FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,9 +51,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2F484D97270CCBF8002EB917 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F484D9B270CCCDA002EB917 /* Strings */,
+				2F484D9A270CCCCB002EB917 /* Images */,
+				2F484D99270CCCB7002EB917 /* Colors */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2F484D98270CCC0B002EB917 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		2F484D99270CCCB7002EB917 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		2F484D9A270CCCCB002EB917 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2F484D9B270CCCDA002EB917 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				2F484D9D270CCD1A002EB917 /* ru.lproj */,
+				2F484D9C270CCD0D002EB917 /* en.lproj */,
+				2F484DAD270CDA93002EB917 /* Strings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		2F484D9C270CCD0D002EB917 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2F484DA1270CCD5D002EB917 /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		2F484D9D270CCD1A002EB917 /* ru.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2F484D9E270CCD3E002EB917 /* Localizable.strings */,
+			);
+			path = ru.lproj;
+			sourceTree = "<group>";
+		};
 		2FAA2632270C1D5B00DE66FE = {
 			isa = PBXGroup;
 			children = (
+				2F484D98270CCC0B002EB917 /* Library */,
+				2F484D97270CCBF8002EB917 /* Resources */,
 				2FAA263D270C1D5B00DE66FE /* GitHubViewer */,
 				2FAA263C270C1D5B00DE66FE /* Products */,
 				C92C2F3B6261FE712760EE3B /* Pods */,
@@ -103,6 +168,7 @@
 				2FAA2638270C1D5B00DE66FE /* Frameworks */,
 				2FAA2639270C1D5B00DE66FE /* Resources */,
 				2F149FB6270C23B500559896 /* SwiftLint */,
+				2F484DAA270CD67D002EB917 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -135,6 +201,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 2FAA2632270C1D5B00DE66FE;
 			productRefGroup = 2FAA263C270C1D5B00DE66FE /* Products */;
@@ -152,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAA2646270C1D5C00DE66FE /* Preview Assets.xcassets in Resources */,
+				2F484DA3270CCD5D002EB917 /* Localizable.strings in Resources */,
+				2F484DA0270CCD3E002EB917 /* Localizable.strings in Resources */,
 				2FAA2643270C1D5C00DE66FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +245,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		2F484DAA270CD67D002EB917 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" >/dev/null; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen not installed\"\nfi\n";
 		};
 		6FB31BE21D5F5A40AAA9632C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -207,11 +294,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAA2641270C1D5B00DE66FE /* ContentView.swift in Sources */,
+				2F484DAE270CDA93002EB917 /* Strings.swift in Sources */,
 				2FAA263F270C1D5B00DE66FE /* GitHubViewerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2F484D9E270CCD3E002EB917 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F484D9F270CCD3E002EB917 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2F484DA1270CCD5D002EB917 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F484DA2270CCD5D002EB917 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2FAA2647270C1D5C00DE66FE /* Debug */ = {

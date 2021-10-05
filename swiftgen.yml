@@ -1,0 +1,7 @@
+strings:
+  inputs: Resources/Strings/en.lproj/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: Resources/Strings/Strings.swift
+      params:
+        publicAccess: false
