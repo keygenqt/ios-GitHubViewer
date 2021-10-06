@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text(L10n.Other.signIn).padding()
+        Text(L10n.Other.signIn)
+            .padding()
+            .foregroundColor(Color(Colors.Text.title.color))
     }
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F123040270E2E5E00D0269E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F12303F270E2E5E00D0269E /* Colors.xcassets */; };
+		2F123044270E321800D0269E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F123043270E321800D0269E /* Assets.xcassets */; };
+		2F123046270E360700D0269E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F123045270E360700D0269E /* Colors.swift */; };
+		2F123048270E367700D0269E /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F123047270E367700D0269E /* Assets.swift */; };
 		2F484DA0270CCD3E002EB917 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F484D9E270CCD3E002EB917 /* Localizable.strings */; };
 		2F484DA3270CCD5D002EB917 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F484DA1270CCD5D002EB917 /* Localizable.strings */; };
 		2F484DAE270CDA93002EB917 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F484DAD270CDA93002EB917 /* Strings.swift */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		0B60559C93BCB8414C2B29BE /* Pods-GitHubViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubViewer.debug.xcconfig"; path = "Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		2F12303F270E2E5E00D0269E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2F123043270E321800D0269E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F123045270E360700D0269E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2F123047270E367700D0269E /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		2F484D9F270CCD3E002EB917 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
 		2F484DA2270CCD5D002EB917 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		2F484DAD270CDA93002EB917 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -51,12 +59,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2F12303E270E2E4B00D0269E /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				2F12303F270E2E5E00D0269E /* Colors.xcassets */,
+				2F123045270E360700D0269E /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		2F484D97270CCBF8002EB917 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F12303E270E2E4B00D0269E /* Colors */,
 				2F484D9B270CCCDA002EB917 /* Strings */,
 				2F484D9A270CCCCB002EB917 /* Images */,
-				2F484D99270CCCB7002EB917 /* Colors */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -68,16 +85,11 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		2F484D99270CCCB7002EB917 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
 		2F484D9A270CCCCB002EB917 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F123043270E321800D0269E /* Assets.xcassets */,
+				2F123047270E367700D0269E /* Assets.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -218,9 +230,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F123040270E2E5E00D0269E /* Colors.xcassets in Resources */,
 				2FAA2646270C1D5C00DE66FE /* Preview Assets.xcassets in Resources */,
 				2F484DA3270CCD5D002EB917 /* Localizable.strings in Resources */,
 				2F484DA0270CCD3E002EB917 /* Localizable.strings in Resources */,
+				2F123044270E321800D0269E /* Assets.xcassets in Resources */,
 				2FAA2643270C1D5C00DE66FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAA2641270C1D5B00DE66FE /* ContentView.swift in Sources */,
+				2F123046270E360700D0269E /* Colors.swift in Sources */,
 				2F484DAE270CDA93002EB917 /* Strings.swift in Sources */,
+				2F123048270E367700D0269E /* Assets.swift in Sources */,
 				2FAA263F270C1D5B00DE66FE /* GitHubViewerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
