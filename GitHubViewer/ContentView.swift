@@ -9,9 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text(L10n.Other.signIn)
-            .padding()
-            .foregroundColor(Color(Colors.Text.title.color))
+        VStack(alignment: .leading) {
+            Image(uiImage: Resources.Assets.phone.image).padding()
+            Text(L10n.Other.signIn)
+                .padding()
+                .foregroundColor(Color(Colors.Text.title.color))
+        }
+
     }
 }
 
