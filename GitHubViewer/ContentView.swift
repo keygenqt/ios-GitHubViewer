@@ -14,6 +14,9 @@ struct ContentView: View {
             Text(L10n.Other.signIn)
                 .padding()
                 .foregroundColor(Color(Colors.Text.title.color))
+            Text(UserModel.mock.name)
+                .padding()
+                .foregroundColor(Color(Colors.Text.title.color))
         }
 
     }

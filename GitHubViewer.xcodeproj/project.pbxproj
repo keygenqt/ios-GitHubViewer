@@ -11,9 +11,14 @@
 		2F123044270E321800D0269E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F123043270E321800D0269E /* Assets.xcassets */; };
 		2F123046270E360700D0269E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F123045270E360700D0269E /* Colors.swift */; };
 		2F123048270E367700D0269E /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F123047270E367700D0269E /* Assets.swift */; };
+		2F41579F2712E021005BE2D2 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41579E2712E021005BE2D2 /* UserRealm.swift */; };
+		2F4157A12712E2A4005BE2D2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2F4157A02712E2A4005BE2D2 /* .swiftlint.yml */; };
 		2F4784D327117E74006FE3A5 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2F4784D227117E74006FE3A5 /* swiftgen.yml */; };
 		2F4784D527117FDD006FE3A5 /* swiftgen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2F4784D427117FDD006FE3A5 /* swiftgen.sh */; };
 		2F4784D727117FF7006FE3A5 /* init.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2F4784D627117FF7006FE3A5 /* init.sh */; };
+		2F4784DC2711834D006FE3A5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4784DB2711834D006FE3A5 /* UserModel.swift */; };
+		2F4784DE2711835B006FE3A5 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4784DD2711835B006FE3A5 /* RepoModel.swift */; };
+		2F4784E027118374006FE3A5 /* FollowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4784DF27118374006FE3A5 /* FollowerModel.swift */; };
 		2F484DA0270CCD3E002EB917 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F484D9E270CCD3E002EB917 /* Localizable.strings */; };
 		2F484DA3270CCD5D002EB917 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F484DA1270CCD5D002EB917 /* Localizable.strings */; };
 		2F484DAE270CDA93002EB917 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F484DAD270CDA93002EB917 /* Strings.swift */; };
@@ -21,18 +26,24 @@
 		2FAA2641270C1D5B00DE66FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA2640270C1D5B00DE66FE /* ContentView.swift */; };
 		2FAA2643270C1D5C00DE66FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FAA2642270C1D5C00DE66FE /* Assets.xcassets */; };
 		2FAA2646270C1D5C00DE66FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FAA2645270C1D5C00DE66FE /* Preview Assets.xcassets */; };
-		EC5BF250EF3692274054E90C /* libPods-GitHubViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFBA27C424D440B0A4E1C1F /* libPods-GitHubViewer.a */; };
+		369E3BB0AFE0172C08020747 /* Pods_GitHubViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FC379476C95D60B4636DEE /* Pods_GitHubViewer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09FC379476C95D60B4636DEE /* Pods_GitHubViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B60559C93BCB8414C2B29BE /* Pods-GitHubViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubViewer.debug.xcconfig"; path = "Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		2F12303F270E2E5E00D0269E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2F123043270E321800D0269E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F123045270E360700D0269E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2F123047270E367700D0269E /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		2F41579E2712E021005BE2D2 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
+		2F4157A02712E2A4005BE2D2 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		2F4784D227117E74006FE3A5 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = swiftgen.yml; path = ../swiftgen.yml; sourceTree = "<group>"; };
 		2F4784D427117FDD006FE3A5 /* swiftgen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = swiftgen.sh; sourceTree = SOURCE_ROOT; };
 		2F4784D627117FF7006FE3A5 /* init.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = init.sh; sourceTree = SOURCE_ROOT; };
+		2F4784DB2711834D006FE3A5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		2F4784DD2711835B006FE3A5 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
+		2F4784DF27118374006FE3A5 /* FollowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerModel.swift; sourceTree = "<group>"; };
 		2F484D9F270CCD3E002EB917 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
 		2F484DA2270CCD5D002EB917 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		2F484DAD270CDA93002EB917 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -41,7 +52,6 @@
 		2FAA2640270C1D5B00DE66FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FAA2642270C1D5C00DE66FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FAA2645270C1D5C00DE66FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9FFBA27C424D440B0A4E1C1F /* libPods-GitHubViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubViewer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3076FFB125EBF7D1247B297 /* Pods-GitHubViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubViewer.release.xcconfig"; path = "Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC5BF250EF3692274054E90C /* libPods-GitHubViewer.a in Frameworks */,
+				369E3BB0AFE0172C08020747 /* Pods_GitHubViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +70,7 @@
 		1E575A0D52DD20C8C6837524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9FFBA27C424D440B0A4E1C1F /* libPods-GitHubViewer.a */,
+				09FC379476C95D60B4636DEE /* Pods_GitHubViewer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -77,11 +87,39 @@
 		2F4784D127117E5B006FE3A5 /* BuildScripts */ = {
 			isa = PBXGroup;
 			children = (
+				2F4157A02712E2A4005BE2D2 /* .swiftlint.yml */,
 				2F4784D627117FF7006FE3A5 /* init.sh */,
 				2F4784D427117FDD006FE3A5 /* swiftgen.sh */,
 				2F4784D227117E74006FE3A5 /* swiftgen.yml */,
 			);
 			path = BuildScripts;
+			sourceTree = "<group>";
+		};
+		2F4784D827118226006FE3A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F4784DA2711827E006FE3A5 /* Server */,
+				2F4784D927118270006FE3A5 /* Database */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F4784D927118270006FE3A5 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2F41579E2712E021005BE2D2 /* UserRealm.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		2F4784DA2711827E006FE3A5 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				2F4784DB2711834D006FE3A5 /* UserModel.swift */,
+				2F4784DD2711835B006FE3A5 /* RepoModel.swift */,
+				2F4784DF27118374006FE3A5 /* FollowerModel.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 		2F484D97270CCBF8002EB917 /* Resources */ = {
@@ -139,6 +177,7 @@
 		2FAA2632270C1D5B00DE66FE = {
 			isa = PBXGroup;
 			children = (
+				2F4784D827118226006FE3A5 /* Model */,
 				2F4784D127117E5B006FE3A5 /* BuildScripts */,
 				2F484D98270CCC0B002EB917 /* Library */,
 				2F484D97270CCBF8002EB917 /* Resources */,
@@ -198,6 +237,7 @@
 				2FAA2639270C1D5B00DE66FE /* Resources */,
 				2F149FB6270C23B500559896 /* SwiftLint */,
 				2F484DAA270CD67D002EB917 /* SwiftGen */,
+				8A3EE2B872984E5D0E028886 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4157A12712E2A4005BE2D2 /* .swiftlint.yml in Resources */,
 				2F123040270E2E5E00D0269E /* Colors.xcassets in Resources */,
 				2F4784D327117E74006FE3A5 /* swiftgen.yml in Resources */,
 				2FAA2646270C1D5C00DE66FE /* Preview Assets.xcassets in Resources */,
@@ -278,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		2F484DAA270CD67D002EB917 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -320,6 +361,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8A3EE2B872984E5D0E028886 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,9 +386,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAA2641270C1D5B00DE66FE /* ContentView.swift in Sources */,
+				2F4784E027118374006FE3A5 /* FollowerModel.swift in Sources */,
+				2F4784DE2711835B006FE3A5 /* RepoModel.swift in Sources */,
+				2F41579F2712E021005BE2D2 /* UserRealm.swift in Sources */,
 				2F123046270E360700D0269E /* Colors.swift in Sources */,
 				2F484DAE270CDA93002EB917 /* Strings.swift in Sources */,
 				2F123048270E367700D0269E /* Assets.swift in Sources */,
+				2F4784DC2711834D006FE3A5 /* UserModel.swift in Sources */,
 				2FAA263F270C1D5B00DE66FE /* GitHubViewerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

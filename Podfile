@@ -1,7 +1,12 @@
 platform :ios, '14.0'
 
 target 'GitHubViewer' do
-  pod 'SwiftGen', '6.5.1'
-  pod 'Alamofire', '~> 5.4'
-  pod 'SwiftLint'
+  
+  use_frameworks!
+  
+  pod 'SwiftGen', '6.5.1'    # gen resources
+  pod 'RealmSwift'           # db
+  # pod 'Kingfisher', '~> 7.0' # images
+  # pod 'Alamofire', '~> 5.4'  # HTTP client
+  pod 'SwiftLint'            # code style
 end
