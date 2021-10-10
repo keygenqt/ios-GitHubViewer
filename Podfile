@@ -6,7 +6,8 @@ target 'GitHubViewer' do
   
   pod 'SwiftGen', '6.5.1'    # gen resources
   pod 'RealmSwift'           # db
-  # pod 'Kingfisher', '~> 7.0' # images
-  # pod 'Alamofire', '~> 5.4'  # HTTP client
+  pod 'Kingfisher', '~> 7.0' # images
+  pod 'Alamofire', '~> 5.4'  # HTTP client
   pod 'SwiftLint'            # code style
+  pod 'SwiftFormat/CLI'      # code style format
 end

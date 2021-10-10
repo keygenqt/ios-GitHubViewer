@@ -22,14 +22,14 @@ class UserRealm: Object {
 extension UserRealm {
     func toModel() -> UserModel {
         return UserModel(
-            identifier: self.identifier,
-            login: self.login,
-            avatarUrl: self.avatarUrl,
-            followersUrl: self.followersUrl,
-            reposUrl: self.reposUrl,
-            name: self.name,
-            bio: self.bio,
-            createdAt: self.createdAt
+            identifier: identifier,
+            login: login,
+            avatarUrl: avatarUrl,
+            followersUrl: followersUrl,
+            reposUrl: reposUrl,
+            name: name,
+            bio: bio,
+            createdAt: createdAt
         )
     }
 }

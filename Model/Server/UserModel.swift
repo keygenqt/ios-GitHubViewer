@@ -10,7 +10,7 @@ import Foundation
 struct UserModel: Codable, Equatable {
     let identifier: String?
     let login: String?
-    let avatarUrl: String?
+    let avatarUrl: String
     let followersUrl: String?
     let reposUrl: String?
     let name: String
@@ -19,18 +19,17 @@ struct UserModel: Codable, Equatable {
 }
 
 extension UserModel {
-
     func toRealm() -> UserRealm {
         let realmModel = UserRealm()
 
-        realmModel.identifier = self.identifier ?? ""
-        realmModel.login = self.login ?? ""
-        realmModel.avatarUrl = self.avatarUrl ?? ""
-        realmModel.followersUrl = self.followersUrl ?? ""
-        realmModel.reposUrl = self.reposUrl ?? ""
-        realmModel.name = self.name
-        realmModel.bio = self.bio ?? ""
-        realmModel.createdAt = self.createdAt ?? ""
+        realmModel.identifier = identifier ?? ""
+        realmModel.login = login ?? ""
+        realmModel.avatarUrl = avatarUrl
+        realmModel.followersUrl = followersUrl ?? ""
+        realmModel.reposUrl = reposUrl ?? ""
+        realmModel.name = name
+        realmModel.bio = bio ?? ""
+        realmModel.createdAt = createdAt ?? ""
 
         return realmModel
     }
