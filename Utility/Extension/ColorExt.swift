@@ -6,9 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
 
-enum Colors {
-    enum Text {
-        static let title = Resources.Colors.title
-    }
+extension Color {
+    static let textTitle = Color(Resources.Colors.title.color.cgColor)
 }

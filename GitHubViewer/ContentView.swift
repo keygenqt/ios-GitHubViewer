@@ -11,8 +11,8 @@ import SwiftUI
 struct ContentView: View {
     var contentCustomFont: AttributedString {
         var attributedString = AttributedString("Custom: \(UserModel.mock.name)")
-        attributedString.foregroundColor = Color(Colors.Text.title.color)
-        attributedString.font = FontFamily.Montserrat.bold.font(size: 28)
+        attributedString.foregroundColor = .textTitle
+        attributedString.font = .navigationBarTitle
         return attributedString
     }
 
@@ -29,7 +29,7 @@ struct ContentView: View {
             Text("System: \(UserModel.mock.name)")
                 .padding()
                 .font(.system(size: 28, weight: .bold))
-                .foregroundColor(Color(Colors.Text.title.color))
+                .foregroundColor(.textTitle)
         }
     }
 }
