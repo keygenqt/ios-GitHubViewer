@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct UserModel: Codable, Equatable {
-    let identifier: String?
+struct UserModel: Codable, Equatable, Identifiable {
+    let id = UUID()
     let login: String?
     let avatarUrl: String
     let followersUrl: String?
@@ -22,7 +22,7 @@ extension UserModel {
     func toRealm() -> UserRealm {
         let realmModel = UserRealm()
 
-        realmModel.identifier = identifier ?? ""
+        realmModel.identifier = id.uuidString
         realmModel.login = login ?? ""
         realmModel.avatarUrl = avatarUrl
         realmModel.followersUrl = followersUrl ?? ""
@@ -36,12 +36,11 @@ extension UserModel {
 
     static var mock: UserModel {
         return UserModel(
-            identifier: "identifier",
             login: "keygenqt",
             avatarUrl: "https://keygenqt.com/images/index/web.jpg",
             followersUrl: "",
             reposUrl: "",
-            name: "Vitaliy",
+            name: ["Zoey", "Chloe", "Amani", "Amaia"].randomElement()!,
             bio: nil,
             createdAt: nil
         )

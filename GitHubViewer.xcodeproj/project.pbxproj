@@ -12,6 +12,9 @@
 		2F123046270E360700D0269E /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F123045270E360700D0269E /* ColorExt.swift */; };
 		2F16275B2714A7E500C2AB0B /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F16275A2714A7E500C2AB0B /* Splash.storyboard */; };
 		2F2D116427161C4000572FDE /* FontExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D116327161C4000572FDE /* FontExt.swift */; };
+		2F32539E271ACE500010BDC8 /* NavTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32539D271ACE500010BDC8 /* NavTab.swift */; };
+		2F3253A0271ADB380010BDC8 /* ListRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F32539F271ADB380010BDC8 /* ListRepos.swift */; };
+		2F3253A2271ADBFF0010BDC8 /* ListReposItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3253A1271ADBFF0010BDC8 /* ListReposItem.swift */; };
 		2F41579F2712E021005BE2D2 /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F41579E2712E021005BE2D2 /* UserRealm.swift */; };
 		2F4157A12712E2A4005BE2D2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2F4157A02712E2A4005BE2D2 /* .swiftlint.yml */; };
 		2F4157AD2712F02B005BE2D2 /* GeneratedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4157AC2712F02B005BE2D2 /* GeneratedStrings.swift */; };
@@ -46,6 +49,9 @@
 		2F123045270E360700D0269E /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		2F16275A2714A7E500C2AB0B /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		2F2D116327161C4000572FDE /* FontExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExt.swift; sourceTree = "<group>"; };
+		2F32539D271ACE500010BDC8 /* NavTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTab.swift; sourceTree = "<group>"; };
+		2F32539F271ADB380010BDC8 /* ListRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepos.swift; sourceTree = "<group>"; };
+		2F3253A1271ADBFF0010BDC8 /* ListReposItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReposItem.swift; sourceTree = "<group>"; };
 		2F41579E2712E021005BE2D2 /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		2F4157A02712E2A4005BE2D2 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		2F4157AC2712F02B005BE2D2 /* GeneratedStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedStrings.swift; sourceTree = "<group>"; };
@@ -294,6 +300,9 @@
 				2FAA2640270C1D5B00DE66FE /* ContentView.swift */,
 				2FAA2642270C1D5C00DE66FE /* Assets.xcassets */,
 				2FAA2644270C1D5C00DE66FE /* Preview Content */,
+				2F32539D271ACE500010BDC8 /* NavTab.swift */,
+				2F32539F271ADB380010BDC8 /* ListRepos.swift */,
+				2F3253A1271ADBFF0010BDC8 /* ListReposItem.swift */,
 			);
 			path = GitHubViewer;
 			sourceTree = "<group>";
@@ -504,7 +513,9 @@
 			files = (
 				2F2D116427161C4000572FDE /* FontExt.swift in Sources */,
 				2FAA2641270C1D5B00DE66FE /* ContentView.swift in Sources */,
+				2F3253A0271ADB380010BDC8 /* ListRepos.swift in Sources */,
 				2F4784E027118374006FE3A5 /* FollowerModel.swift in Sources */,
+				2F3253A2271ADBFF0010BDC8 /* ListReposItem.swift in Sources */,
 				2F4784DE2711835B006FE3A5 /* RepoModel.swift in Sources */,
 				2F41579F2712E021005BE2D2 /* UserRealm.swift in Sources */,
 				2F4157B12712F039005BE2D2 /* GeneratedFonts.swift in Sources */,
@@ -513,6 +524,7 @@
 				2F123046270E360700D0269E /* ColorExt.swift in Sources */,
 				2F4784DC2711834D006FE3A5 /* UserModel.swift in Sources */,
 				2FAA263F270C1D5B00DE66FE /* GitHubViewerApp.swift in Sources */,
+				2F32539E271ACE500010BDC8 /* NavTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

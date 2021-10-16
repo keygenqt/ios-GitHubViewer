@@ -22,7 +22,6 @@ class UserRealm: Object {
 extension UserRealm {
     func toModel() -> UserModel {
         return UserModel(
-            identifier: identifier,
             login: login,
             avatarUrl: avatarUrl,
             followersUrl: followersUrl,
