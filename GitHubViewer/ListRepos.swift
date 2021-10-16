@@ -43,8 +43,10 @@ struct ListRepos: View {
         UserModel.mock,
     ]
     var body: some View {
-        List(models) { model in
-            ListReposItem(model: model)
+        NavigationView {
+            List(models) { model in
+                ListReposItem(model: model)
+            }.navigationTitle("Repos")
         }
     }
 }

@@ -26,6 +26,7 @@ internal enum Resources {
     internal static let arrowForward = ImageAsset(name: "arrow_forward")
     internal static let phone = ImageAsset(name: "phone")
     internal static let launcher = ImageAsset(name: "launcher")
+    internal static let user = ImageAsset(name: "user")
   }
   internal enum Colors {
     internal static let title = ColorAsset(name: "title")

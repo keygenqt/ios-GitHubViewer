@@ -18,7 +18,6 @@ struct ContentView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            KFImage(URL(string: UserModel.mock.avatarUrl)!)
             Image(uiImage: Resources.Assets.phone.image).padding()
             Text(L10n.Other.signIn)
                 .padding()

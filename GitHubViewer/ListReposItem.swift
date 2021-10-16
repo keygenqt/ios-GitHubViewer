@@ -14,9 +14,19 @@ struct ListReposItem: View {
     var body: some View {
         HStack {
             KFImage(URL(string: model.avatarUrl)!)
+                .placeholder {
+                    VStack(alignment: .leading) {
+                        Image(systemName: "person.fill")
+                            .frame(width: 30, height: 30)
+                    }
+                    .background(Color(white: 0.90))
+                    .clipShape(Circle())
+                }
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
                 .frame(width: 50, height: 50)
+
             Text(model.name)
 
             Spacer()
