@@ -25,7 +25,7 @@ struct NavGitHubViewer: View {
                         .font(.largeTitle)
                 }
                 .tag(2)
-        }
+        }.accentColor(.orange)
     }
 }
 
