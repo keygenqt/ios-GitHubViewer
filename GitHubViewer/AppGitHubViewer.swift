@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct GitHubViewerApp: App {
+struct AppGitHubViewer: App {
     var body: some Scene {
         WindowGroup {
-            NavTab()
+            NavGitHubViewer()
         }
     }
 }

@@ -12,10 +12,8 @@ import Foundation
 internal enum L10n {
 
   internal enum Other {
-    /// Sign In
-    internal static let signIn = L10n.tr("Localizable", "Other.signIn")
-    /// Sign Up
-    internal static let signUp = L10n.tr("Localizable", "Other.signUp")
+    /// Bio
+    internal static let titleBio = L10n.tr("Localizable", "Other.titleBio")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

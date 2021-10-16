@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavTab: View {
+struct NavGitHubViewer: View {
     @State var selectedView = 1
 
     var body: some View {
@@ -19,7 +19,7 @@ struct NavTab: View {
                 }
                 .tag(1)
 
-            ContentView()
+            ListFollower()
                 .tabItem {
                     Image(systemName: "person.circle")
                         .font(.largeTitle)
@@ -31,6 +31,6 @@ struct NavTab: View {
 
 struct NavTab_Previews: PreviewProvider {
     static var previews: some View {
-        NavTab()
+        NavGitHubViewer()
     }
 }

@@ -1,14 +1,14 @@
 //
-//  UserRealm.swift
+//  FollowerRealm.swift
 //  GitHubViewer
 //
-//  Created by Виталий Зарубин on 10.10.2021.
+//  Created by Виталий Зарубин on 16.10.2021.
 //
 
 import Foundation
 import RealmSwift
 
-class UserRealm: Object {
+class FollowerRealm: Object {
     @objc dynamic var id: String = ""
     @objc dynamic var login: String = ""
     @objc dynamic var avatarUrl: String = ""
@@ -19,9 +19,9 @@ class UserRealm: Object {
     @objc dynamic var createdAt: String = ""
 }
 
-extension UserRealm {
-    func toModel() -> UserModel {
-        return UserModel(
+extension FollowerRealm {
+    func toModel() -> FollowerModel {
+        return FollowerModel(
             id: id,
             login: login,
             avatarUrl: avatarUrl,

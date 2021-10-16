@@ -1,5 +1,5 @@
 //
-//  ListReposItem.swift
+//  ListFavoriteItem.swift
 //  GitHubViewer
 //
 //  Created by Виталий Зарубин on 16.10.2021.
@@ -8,8 +8,8 @@
 import Kingfisher
 import SwiftUI
 
-struct ListReposItem: View {
-    var model: UserModel
+struct ListFollowerItem: View {
+    var model: FollowerModel
 
     var body: some View {
         HStack {
@@ -34,8 +34,8 @@ struct ListReposItem: View {
     }
 }
 
-struct ListReposItem_Previews: PreviewProvider {
+struct ListFavoriteItem_Previews: PreviewProvider {
     static var previews: some View {
-        ListReposItem(model: UserModel.mock)
+        ListFollowerItem(model: FollowerModel.mock)
     }
 }
