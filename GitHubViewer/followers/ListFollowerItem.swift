@@ -13,7 +13,7 @@ struct ListFollowerItem: View {
 
     var body: some View {
         HStack {
-            KFImage(URL(string: model.avatarUrl)!)
+            KFImage(URL(string: model.avatarUrl!)!)
                 .placeholder {
                     VStack(alignment: .leading) {
                         Image(systemName: "person.fill")
@@ -25,16 +25,17 @@ struct ListFollowerItem: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
-                .frame(width: 50, height: 50)
+                .frame(width: 30, height: 30)
+                .padding(8)
 
-            Text(model.name)
+            Text(model.login!)
 
             Spacer()
         }
     }
 }
 
-struct ListFavoriteItem_Previews: PreviewProvider {
+struct ListFollowerItem_Previews: PreviewProvider {
     static var previews: some View {
         ListFollowerItem(model: FollowerModel.mock)
     }

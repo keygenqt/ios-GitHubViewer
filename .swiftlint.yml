@@ -5,15 +5,12 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
     - Carthage
     - Pods
     
+disabled_rules: # rule identifiers to exclude from running
+  - identifier_name
+    
 # rule specific config
 trailing_comma:
   mandatory_comma: true
-identifier_name:
-  min_length:   # only min_length
-    error: 3    # only error
-  excluded:     # excluded via string array
-    - id
-    - URL
 
 line_length:
   - 300 # warning

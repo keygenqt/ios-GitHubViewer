@@ -9,27 +9,33 @@ import Foundation
 import RealmSwift
 
 class RepoRealm: Object {
-    @objc dynamic var id: String = ""
-    @objc dynamic var login: String = ""
-    @objc dynamic var avatarUrl: String = ""
-    @objc dynamic var followersUrl: String = ""
-    @objc dynamic var reposUrl: String = ""
+    @objc dynamic var id: Int = 1
     @objc dynamic var name: String = ""
-    @objc dynamic var bio: String = ""
+    @objc dynamic var language: String = ""
     @objc dynamic var createdAt: String = ""
+    @objc dynamic var desc: String = ""
+    @objc dynamic var isPrivate: Bool = false
+}
+
+extension Array where Element == RepoRealm {
+    func toRepoModels() -> [RepoModel] {
+        var models = [RepoModel]()
+        for x in self {
+            models.append(x.toModel())
+        }
+        return models
+    }
 }
 
 extension RepoRealm {
     func toModel() -> RepoModel {
-        return RepoModel(
-            id: id,
-            login: login,
-            avatarUrl: avatarUrl,
-            followersUrl: followersUrl,
-            reposUrl: reposUrl,
-            name: name,
-            bio: bio,
-            createdAt: createdAt
-        )
+        let model = RepoModel()
+        model.id = id
+        model.name = name
+        model.language = language
+        model.createdAt = createdAt
+        model.description = desc
+        model.isPrivate = isPrivate
+        return model
     }
 }

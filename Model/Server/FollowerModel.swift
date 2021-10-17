@@ -7,54 +7,56 @@
 
 import Foundation
 
-struct FollowerModel: Codable, Equatable, Identifiable {
-    let id: String?
-    let login: String?
-    let avatarUrl: String
-    let followersUrl: String?
-    let reposUrl: String?
-    let name: String
-    let bio: String?
-    let createdAt: String?
+class FollowerModel: Decodable, Identifiable {
+    var id: Int?
+    var login: String?
+    var avatarUrl: String?
+    var url: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case login
+        case avatar_url
+        case html_url
+    }
+
+    init() {}
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try? container.decode(Int.self, forKey: .id)
+        login = try? container.decode(String.self, forKey: .login)
+        avatarUrl = try? container.decode(String.self, forKey: .avatar_url)
+        url = try? container.decode(String.self, forKey: .html_url)
+    }
+}
+
+extension Array where Element == FollowerModel {
+    func toFollowerRealms() -> [FollowerRealm] {
+        var models = [FollowerRealm]()
+        for x in self {
+            models.append(x.toRealm())
+        }
+        return models
+    }
 }
 
 extension FollowerModel {
     func toRealm() -> FollowerRealm {
         let realmModel = FollowerRealm()
-
-        realmModel.id = id ?? UUID().uuidString
+        realmModel.id = id ?? 1
         realmModel.login = login ?? ""
-        realmModel.avatarUrl = avatarUrl
-        realmModel.followersUrl = followersUrl ?? ""
-        realmModel.reposUrl = reposUrl ?? ""
-        realmModel.name = name
-        realmModel.bio = bio ?? ""
-        realmModel.createdAt = createdAt ?? ""
-
+        realmModel.avatarUrl = avatarUrl ?? ""
+        realmModel.url = url ?? ""
         return realmModel
     }
 
     static var mock: FollowerModel {
-        return FollowerModel(
-            id: UUID().uuidString,
-            login: "keygenqt",
-            avatarUrl: [
-                "https://www.zastavki.com/pictures/1920x1080/2015/Girls_Red-haired_girl_under_the_branches_of_spruce_105473_23.jpg",
-                "https://w.wallhaven.cc/full/ym/wallhaven-ym192l.jpg",
-                "https://img1.goodfon.ru/original/1920x1200/9/99/devushka-osen-park-bryunetka.jpg",
-                "https://w-dog.ru/wallpapers/0/96/371424389841459/lico-devushka-shatenka.jpg",
-                "https://www.wallpaperup.com/uploads/wallpapers/2019/02/19/1313727/427e22c10e737867337fcdb0670e6112-1400.jpg",
-            ].randomElement()!,
-            followersUrl: "",
-            reposUrl: "",
-            name: [
-                "Zoey",
-                "Chloe",
-                "Amani",
-                "Amaia",
-            ].randomElement()!,
-            bio: nil,
-            createdAt: nil
-        )
+        let model = FollowerModel()
+        model.id = 1
+        model.login = "Viatliy"
+        model.avatarUrl = "https://w.wallhaven.cc/full/ym/wallhaven-ym192l.jpg"
+        model.url = "https://github.com/keygenqt"
+        return model
     }
 }

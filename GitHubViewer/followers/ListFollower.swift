@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct ListFollower: View {
-    let models = [
-        FollowerModel.mock,
-        FollowerModel.mock,
-        FollowerModel.mock,
-        FollowerModel.mock,
-        FollowerModel.mock,
-        FollowerModel.mock,
-    ]
+    @ObservedObject var viewModel = FollowerViewModel()
+    @Environment(\.openURL) var openURL
+
     var body: some View {
         NavigationView {
-            List(models) { model in
-                ListFollowerItem(model: model)
-            }.navigationTitle("Follower")
+            if viewModel.isShowProgressView {
+                VStack {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .orange))
+                }.navigationTitle("Followers")
+            } else {
+                List(viewModel.models) { model in
+                    NavigationLink(destination: Button("Visit to GitHub \(model.login!)") { openURL(URL(string: model.url!)!) }) {
+                        ListFollowerItem(model: model)
+                    }
+                }
+                .refreshable {
+                    viewModel.refresh()
+                }
+                .navigationTitle("Followers")
+            }
         }
     }
 }
 
-struct ListFavorite_Previews: PreviewProvider {
+struct ListFollower_Previews: PreviewProvider {
     static var previews: some View {
         ListFollower()
     }

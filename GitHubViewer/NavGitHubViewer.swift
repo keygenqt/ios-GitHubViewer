@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NavGitHubViewer: View {
     @State var selectedView = 1
+    @State private var showingAlert = false
 
     var body: some View {
         TabView {

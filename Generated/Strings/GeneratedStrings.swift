@@ -12,8 +12,16 @@ import Foundation
 internal enum L10n {
 
   internal enum Other {
+    /// Created At
+    internal static let createdAt = L10n.tr("Localizable", "Other.createdAt")
     /// Bio
     internal static let titleBio = L10n.tr("Localizable", "Other.titleBio")
+    /// Private
+    internal static let typePrivate = L10n.tr("Localizable", "Other.typePrivate")
+    /// Public
+    internal static let typePublic = L10n.tr("Localizable", "Other.typePublic")
+    /// Type
+    internal static let typeRepo = L10n.tr("Localizable", "Other.typeRepo")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

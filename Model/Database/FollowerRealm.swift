@@ -9,27 +9,29 @@ import Foundation
 import RealmSwift
 
 class FollowerRealm: Object {
-    @objc dynamic var id: String = ""
+    @objc dynamic var id: Int = 1
     @objc dynamic var login: String = ""
     @objc dynamic var avatarUrl: String = ""
-    @objc dynamic var followersUrl: String = ""
-    @objc dynamic var reposUrl: String = ""
-    @objc dynamic var name: String = ""
-    @objc dynamic var bio: String = ""
-    @objc dynamic var createdAt: String = ""
+    @objc dynamic var url: String = ""
+}
+
+extension Array where Element == FollowerRealm {
+    func toFollowerModels() -> [FollowerModel] {
+        var models = [FollowerModel]()
+        for x in self {
+            models.append(x.toModel())
+        }
+        return models
+    }
 }
 
 extension FollowerRealm {
     func toModel() -> FollowerModel {
-        return FollowerModel(
-            id: id,
-            login: login,
-            avatarUrl: avatarUrl,
-            followersUrl: followersUrl,
-            reposUrl: reposUrl,
-            name: name,
-            bio: bio,
-            createdAt: createdAt
-        )
+        let model = FollowerModel()
+        model.id = id
+        model.login = login
+        model.avatarUrl = avatarUrl
+        model.url = url
+        return model
     }
 }

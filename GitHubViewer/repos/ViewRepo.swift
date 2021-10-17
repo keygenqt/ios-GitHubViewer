@@ -10,9 +10,10 @@ import SwiftUI
 
 struct ViewRepo: View {
     var model: RepoModel
+    @State var heightKFImage = 30.0
 
-    var contentCustomFont: AttributedString {
-        var attributedString = AttributedString("Name: \(model.name)")
+    var titleName: AttributedString {
+        var attributedString = AttributedString("Name: \(model.name ?? "nil")")
         attributedString.foregroundColor = .textTitle
         attributedString.font = .navigationBarTitle
         return attributedString
@@ -21,24 +22,32 @@ struct ViewRepo: View {
     var body: some View {
         ScrollView {
             VStack {
-                KFImage(URL(string: model.avatarUrl)!)
+                KFImage(URL(string: ConstantsApp.RANDOM_IMAGE)!)
                     .placeholder {
-                        Image(uiImage: Resources.Assets.user.image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
+                        ProgressView()
                     }
                     .resizable()
+                    .fade(duration: 0.25)
+                    .forceRefresh()
+                    .onSuccess { _ in
+                        heightKFImage = .nan
+                    }
                     .aspectRatio(contentMode: .fit)
+                    .frame(height: heightKFImage)
 
                 VStack(alignment: .leading) {
-                    Text(contentCustomFont)
+                    Text(titleName)
 
                     Divider().frame(height: 10)
 
                     HStack {
-                        Text(model.login!)
+                        if model.isPrivate ?? false {
+                            Text(L10n.Other.typePrivate)
+                        } else {
+                            Text(L10n.Other.typePublic)
+                        }
                         Spacer()
-                        Text("Login")
+                        Text(L10n.Other.typeRepo)
                     }
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -48,16 +57,16 @@ struct ViewRepo: View {
                     HStack {
                         Text(model.createdAt!)
                         Spacer()
-                        Text("Created At")
+                        Text(L10n.Other.createdAt)
                     }
                     .font(.subheadline)
                     .foregroundColor(.secondary)
 
                     Divider()
 
-                    if model.bio != nil {
+                    if model.description != nil {
                         Text(L10n.Other.titleBio).font(.title2)
-                        Text(model.bio!).padding(.top, 0.5)
+                        Text(model.description!).padding(.top, 0.5)
                     }
                 }
                 .padding()
@@ -71,7 +80,7 @@ struct ViewRepo: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ViewRepo_Previews: PreviewProvider {
     static var previews: some View {
         ViewRepo(model: RepoModel.mock)
     }
