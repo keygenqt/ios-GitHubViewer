@@ -9,21 +9,23 @@ import Alamofire
 import Foundation
 
 class ReposNetwork: APIHandler {
-    @Published var list: [RepoModel] = []
-    @Published var isLoading = false
-
-    func getListRepo() {
-        isLoading = true
-        AF.request("\(ConstantsApp.API_URL)users/\(ConstantsApp.GITHUB_USER)/repos", method: .get)
-            .responseDecodable { [weak self] (response: DataResponse<[RepoModel], AFError>) in
-                sleep(5) // slow internet
-                guard let weakSelf = self else { return }
-                guard let response = weakSelf.handleResponse(response) as? [RepoModel] else {
-                    weakSelf.isLoading = false
-                    return
+    @discardableResult
+    func getListRepo() async throws -> [RepoModel] {
+        return try await withCheckedThrowingContinuation { continuation in
+            AF.request("\(ConstantsApp.API_URL)users/\(ConstantsApp.GITHUB_USER)/repos", method: .get)
+                .responseDecodable(queue: DispatchQueue(label: "ReposNetwork")) { (response: DataResponse<[RepoModel], AFError>) in
+                    sleep(3) // slow internet
+                    switch response.result {
+                    case let .success(decodedResponse):
+                        continuation.resume(returning: decodedResponse)
+                    case let .failure(error):
+                        if error.responseCode == 404 {
+                            continuation.resume(throwing: NetworkError.notFound)
+                        } else {
+                            continuation.resume(throwing: NetworkError.unexpected(code: error.responseCode ?? -1))
+                        }
+                    }
                 }
-                weakSelf.isLoading = false
-                weakSelf.list = response
-            }
+        }
     }
 }

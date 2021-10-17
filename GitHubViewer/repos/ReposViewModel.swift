@@ -10,58 +10,43 @@ import Foundation
 
 class ReposViewModel: ObservableObject, Identifiable {
     @Published var isShowProgressView = true
-    @Published var isLoading = false
-    @Published var models: [RepoModel] = [] {
-        didSet {
-            serviceData.clear()
-            if !models.isEmpty {
-                serviceData.saveList(models.toRepoRealms())
-            }
-            if !models.isEmpty {
-                isShowProgressView = false
-            }
-        }
-    }
-
-    private var disposables: Set<AnyCancellable> = []
+    @Published var error: NetworkError?
+    @Published var models: [RepoModel] = []
 
     var serviceNetwork = ReposNetwork()
     var serviceData = ReposData()
 
-    private var isLoadingNetwork: AnyPublisher<Bool, Never> {
-        serviceNetwork.$isLoading
-            .receive(on: RunLoop.main)
-            .map { $0 }
-            .eraseToAnyPublisher()
-    }
-
-    private var listPublisher: AnyPublisher<[RepoModel], Never> {
-        serviceNetwork.$list
-            .receive(on: RunLoop.main)
-            .eraseToAnyPublisher()
-    }
-
     init() {
-        isLoadingNetwork
-            .receive(on: RunLoop.main)
-            .assign(to: \.isLoading, on: self)
-            .store(in: &disposables)
-
-        listPublisher
-            .receive(on: RunLoop.main)
-            .assign(to: \.models, on: self)
-            .store(in: &disposables)
-
         let list = serviceData.getList()
-
         if list.isEmpty {
-            refresh()
+            Task {
+                await self.refresh()
+            }
         } else {
-            serviceNetwork.list = list.toRepoModels()
+            models = list.toRepoModels()
+            isShowProgressView = false
         }
     }
 
-    func refresh() {
-        serviceNetwork.getListRepo()
+    func refresh() async {
+        error = nil
+        do {
+            let response = try await serviceNetwork.getListRepo()
+            DispatchQueue.global(qos: .background).async {
+                Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
+                    self.serviceData.clear()
+                    self.serviceData.saveList(response.toRepoRealms())
+                    DispatchQueue.main.async {
+                        self.models = response
+                        self.isShowProgressView = false
+                    }
+                }
+                RunLoop.current.run()
+            }
+        } catch let networkError as NetworkError {
+            self.error = networkError
+        } catch {
+            print("Unexpected error: \(error).")
+        }
     }
 }

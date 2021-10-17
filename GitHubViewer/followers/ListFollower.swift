@@ -17,15 +17,21 @@ struct ListFollower: View {
                 VStack {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .orange))
-                }.navigationTitle("Followers")
+                }
+                .navigationTitle("Followers")
             } else {
                 List(viewModel.models) { model in
                     NavigationLink(destination: Button("Visit to GitHub \(model.login!)") { openURL(URL(string: model.url!)!) }) {
                         ListFollowerItem(model: model)
                     }
                 }
+                .overlay(alignment: .bottom) {
+                    if viewModel.error != nil {
+                        ErrorView(error: viewModel.error)
+                    }
+                }
                 .refreshable {
-                    viewModel.refresh()
+                    await viewModel.refresh()
                 }
                 .navigationTitle("Followers")
             }

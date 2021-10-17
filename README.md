@@ -12,8 +12,8 @@ Implementation of the application using the latest Android Tech Stack and the [G
 
 ### Preview
 <p>
-<img src="data/light2.gif" width="41%"/>
-<img src="data/dark2.gif" width="41%"/>
+<img src="data/light3.gif" width="41%"/>
+<img src="data/dark3.gif" width="41%"/>
 </p>
 
 ### Libraries

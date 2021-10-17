@@ -17,15 +17,21 @@ struct ListRepos: View {
                 VStack {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .orange))
-                }.navigationTitle("Repos")
+                }
+                .navigationTitle("Repos")
             } else {
                 List(viewModel.models) { model in
                     NavigationLink(destination: ViewRepo(model: model)) {
                         ListReposItem(model: model)
                     }
                 }
+                .overlay(alignment: .bottom) {
+                    if viewModel.error != nil {
+                        ErrorView(error: viewModel.error)
+                    }
+                }
                 .refreshable {
-                    viewModel.refresh()
+                    await viewModel.refresh()
                 }
                 .navigationTitle("Repos")
             }

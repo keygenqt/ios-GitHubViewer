@@ -48,6 +48,8 @@
 		2FAA2641270C1D5B00DE66FE /* ViewRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA2640270C1D5B00DE66FE /* ViewRepo.swift */; };
 		2FF932AF271C3475003DA3D8 /* ReposData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF932AE271C3475003DA3D8 /* ReposData.swift */; };
 		2FF932B1271C3486003DA3D8 /* FollowerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF932B0271C3486003DA3D8 /* FollowerData.swift */; };
+		2FF932B4271C9E1E003DA3D8 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF932B3271C9E1E003DA3D8 /* ErrorView.swift */; };
+		2FF932B6271CA15C003DA3D8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF932B5271CA15C003DA3D8 /* NetworkError.swift */; };
 		369E3BB0AFE0172C08020747 /* Pods_GitHubViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FC379476C95D60B4636DEE /* Pods_GitHubViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,8 @@
 		2FAA2640270C1D5B00DE66FE /* ViewRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepo.swift; sourceTree = "<group>"; };
 		2FF932AE271C3475003DA3D8 /* ReposData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposData.swift; sourceTree = "<group>"; };
 		2FF932B0271C3486003DA3D8 /* FollowerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerData.swift; sourceTree = "<group>"; };
+		2FF932B3271C9E1E003DA3D8 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		2FF932B5271CA15C003DA3D8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C3076FFB125EBF7D1247B297 /* Pods-GitHubViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubViewer.release.xcconfig"; path = "Target Support Files/Pods-GitHubViewer/Pods-GitHubViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +146,7 @@
 				2F37DC69271BF7A7005DB8C4 /* ConstantsApp.swift */,
 				2F37DC72271C033E005DB8C4 /* APIHandler.swift */,
 				2F37DC74271C1237005DB8C4 /* ConstantsLanguage.swift */,
+				2FF932B5271CA15C003DA3D8 /* NetworkError.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 		2FAA2632270C1D5B00DE66FE = {
 			isa = PBXGroup;
 			children = (
+				2FF932B2271C9E09003DA3D8 /* Components */,
 				2F37DC66271BF603005DB8C4 /* Services */,
 				2F2D11612716171200572FDE /* Utility */,
 				2F1627592714A7D300C2AB0B /* Storyboard */,
@@ -375,6 +381,14 @@
 				2F32539D271ACE500010BDC8 /* NavGitHubViewer.swift */,
 			);
 			path = GitHubViewer;
+			sourceTree = "<group>";
+		};
+		2FF932B2271C9E09003DA3D8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2FF932B3271C9E1E003DA3D8 /* ErrorView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C92C2F3B6261FE712760EE3B /* Pods */ = {
@@ -572,12 +586,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F2D116427161C4000572FDE /* FontExt.swift in Sources */,
+				2FF932B6271CA15C003DA3D8 /* NetworkError.swift in Sources */,
 				2FAA2641270C1D5B00DE66FE /* ViewRepo.swift in Sources */,
 				2F3253A0271ADB380010BDC8 /* ListRepos.swift in Sources */,
 				2F4784E027118374006FE3A5 /* FollowerModel.swift in Sources */,
 				2F3253A2271ADBFF0010BDC8 /* ListReposItem.swift in Sources */,
 				2F3253AC271B1E340010BDC8 /* RepoRealm.swift in Sources */,
 				2F37DC79271C1932005DB8C4 /* FollowerNetwork.swift in Sources */,
+				2FF932B4271C9E1E003DA3D8 /* ErrorView.swift in Sources */,
 				2F4784DE2711835B006FE3A5 /* RepoModel.swift in Sources */,
 				2F37DC7B271C1A5C005DB8C4 /* FollowerViewModel.swift in Sources */,
 				2F4157B12712F039005BE2D2 /* GeneratedFonts.swift in Sources */,
