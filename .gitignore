@@ -11,7 +11,4 @@ xcuserdata
 *.xccheckout
 *.xcuserstate
 *.xcscmblueprint
-
-
-
-
+.idea
